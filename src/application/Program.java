@@ -35,9 +35,9 @@ public class Program {
 		double pricePerDay = sc.nextDouble();
 		
 		RentalService rentalService = new RentalService(pricePerDay,pricePerHour, new BrazilTaxService());  
-																// instanciação da classe especifica BrazilTaxService sem precisar mudar a classe RentalSvc
-		rentalService.processInvoice(cr);  //instancia de rentalSvc, metódo processInvoice para gerar a nota de pagamaneto
-										// com base no parametro da entidade principal (cr) que estao as informaçoes do alugel do carro
+																
+		rentalService.processInvoice(cr); 
+										
 		
 		System.out.println("INVOICE: ");
 		System.out.println("Basic payment: " + String.format("%.2f", cr.getInvoice().getBasicPayment()));
